@@ -31,7 +31,7 @@ public class LoginTest {
 	@Test
 	public void Login() throws InterruptedException {
 		Thread.sleep(2000);
-		driver.findElement(By.id("email")).sendKeys("ho@gmail.com");
+		
 		LoginPage page=new LoginPage(driver);
 		page.Login("ho@gmail.com", "password");
 		
