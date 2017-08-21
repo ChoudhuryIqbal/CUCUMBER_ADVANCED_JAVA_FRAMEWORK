@@ -14,16 +14,20 @@ import com.ap.framework.base.BasePage;
  * @author choudhuryIqbal
  *
  */
-public class LoginPage {
+public class LoginPage extends BasePage {
 
 	
+	
+	
+	/**
+	 * @param driver
+	 */
 	public LoginPage(WebDriver driver) {
-		PageFactory.initElements(driver,this);
-		
+		super(driver);
+		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
+
+
 	@FindBy(id="email")
 	public WebElement textEmail;
 	

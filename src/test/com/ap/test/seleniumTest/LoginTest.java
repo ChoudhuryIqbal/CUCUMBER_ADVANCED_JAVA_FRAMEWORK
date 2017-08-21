@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import test.com.ap.test.pages.HomePage;
 import test.com.ap.test.pages.LoginPage;
 
 /**
@@ -23,7 +24,7 @@ public class LoginTest {
 	public void Initialize() {
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\choudhuryIqbal\\eclipse-workspace\\ap-framework\\src\\com\\ap\\framework\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		driver.get("http://automationpractice.com/index.php");
 		
 		
 	}
@@ -31,7 +32,8 @@ public class LoginTest {
 	@Test
 	public void Login() throws InterruptedException {
 		Thread.sleep(2000);
-		
+		HomePage home=new HomePage(driver);
+		home.clickLogin();
 		LoginPage page=new LoginPage(driver);
 		page.Login("ho@gmail.com", "password");
 		
