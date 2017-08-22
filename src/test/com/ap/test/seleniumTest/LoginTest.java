@@ -4,9 +4,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import  com.ap.framework.base.Base;
+import com.ap.framework.base.Browsertype;
 import com.ap.framework.base.DriverContext;
+import com.ap.framework.base.FrameworkInitialize;
 
 import test.com.ap.test.pages.HomePage;
 import test.com.ap.test.pages.LoginPage;
@@ -19,14 +22,14 @@ import test.com.ap.test.pages.LoginPage;
  * @author choudhuryIqbal
  *
  */
-public class LoginTest extends Base{
+public class LoginTest extends FrameworkInitialize{
 
 	
 
 	@org.junit.Before
 	public void Initialize() {
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\choudhuryIqbal\\eclipse-workspace\\ap-framework\\src\\com\\ap\\framework\\drivers\\geckodriver.exe");
-		DriverContext.driver = new FirefoxDriver();
+		InitializeBrowser(Browsertype.Firefox);
+		
 		DriverContext.driver.get("http://automationpractice.com/index.php");
 		
 		
