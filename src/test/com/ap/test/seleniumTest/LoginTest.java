@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import  com.ap.framework.base.Base;
 import com.ap.framework.base.DriverContext;
 
 import test.com.ap.test.pages.HomePage;
@@ -18,7 +19,7 @@ import test.com.ap.test.pages.LoginPage;
  * @author choudhuryIqbal
  *
  */
-public class LoginTest {
+public class LoginTest extends Base{
 
 	
 
@@ -35,10 +36,8 @@ public class LoginTest {
 	public void Login() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage home=new HomePage();
-		LoginPage loginPage=home.clickLogin();
-		
-		loginPage.Login("ho@gmail.com", "password");
-		
+		currentPage =home.clickLogin();
+		((LoginPage) currentPage).Login("ho@gmail.com", "password");
 	}
 
 }

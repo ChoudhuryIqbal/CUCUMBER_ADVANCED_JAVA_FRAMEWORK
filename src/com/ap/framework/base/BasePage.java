@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author choudhuryIqbal
  *
  */
-public abstract class BasePage {
+public abstract class BasePage extends Base{
 
 	/**
 	 * 

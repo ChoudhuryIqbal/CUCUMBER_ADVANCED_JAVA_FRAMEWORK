@@ -8,5 +8,6 @@ package com.ap.framework.base;
  *
  */
 public class Base {
+	public static BasePage currentPage;
 
 }
