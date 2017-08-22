@@ -23,8 +23,9 @@ public class Base {
 			return (TPage)this;
 		}
 		catch(Exception e) {
-			
+			e.getStackTrace();
 		}
 		return null;
+		
 	}
 }

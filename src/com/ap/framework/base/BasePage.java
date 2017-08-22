@@ -15,9 +15,9 @@ public abstract class BasePage extends Base{
 	/**
 	 * 
 	 */
-	public BasePage() {
+	/*public BasePage() {
 		PageFactory.initElements(DriverContext.driver,this);
-	}
+	}*/
 	
 
 }
