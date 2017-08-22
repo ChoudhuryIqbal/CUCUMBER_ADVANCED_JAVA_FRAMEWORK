@@ -8,5 +8,11 @@ package com.ap.framework.utilities;
  *
  */
 public class ExcelUtil {
+	
+	//opening the excel sheet
+	//read cell data
+	//store in memory collection 
+	//get cell method
+	
 
 }
