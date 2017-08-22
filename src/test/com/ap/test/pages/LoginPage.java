@@ -22,11 +22,7 @@ public class LoginPage extends BasePage {
 	/**
 	 * @param driver
 	 */
-	public LoginPage(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
-
+	
 
 	@FindBy(id="email")
 	public WebElement textEmail;

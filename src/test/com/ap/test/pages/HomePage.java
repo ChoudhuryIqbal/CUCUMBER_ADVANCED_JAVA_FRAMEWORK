@@ -14,23 +14,12 @@ import com.ap.framework.base.BasePage;
  * @author choudhuryIqbal
  *
  */
-public class HomePage extends BasePage{
-	
-	
-	@FindBy(className ="login")
+public class HomePage extends BasePage {
+
+	@FindBy(className = "login")
 	public WebElement btnLogin;
 
-	/**
-	 * @param driver
-	 */
-	public HomePage(WebDriver driver) {
-		super(driver);
-	
-	}
-	
-	
 	public void clickLogin() {
 		btnLogin.click();
 	}
-
 }

@@ -19,12 +19,5 @@ public class AccountPage extends BasePage {
 	public WebElement txtCart;
 
 
-	/**
-	 * @param driver
-	 */
-	public AccountPage(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
-
+	
 }

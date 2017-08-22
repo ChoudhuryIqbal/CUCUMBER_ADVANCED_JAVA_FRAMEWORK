@@ -21,9 +21,6 @@ public class ShoppingCartPage  extends BasePage{
 	/**
 	 * @param driver
 	 */
-	public ShoppingCartPage(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
+	
 
 }
