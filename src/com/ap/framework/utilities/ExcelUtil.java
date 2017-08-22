@@ -27,6 +27,9 @@ public class ExcelUtil {
 		wrkbook = Workbook.getWorkbook(new File(ExcelSheetPath));
 		//For Demo purpose the excel sheet path is hardcoded, but not recommended :)
 		wrksheet = wrkbook.getSheet("Sheet1");
+		//call the coloumn dictionary to store column names
+		
+		ColumnDictionary();
 	}
  
 	//Returns the Number of Rows
