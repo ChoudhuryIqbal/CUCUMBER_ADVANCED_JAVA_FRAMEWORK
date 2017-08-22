@@ -19,7 +19,8 @@ public class HomePage extends BasePage {
 	@FindBy(className = "login")
 	public WebElement btnLogin;
 
-	public void clickLogin() {
+	public LoginPage clickLogin() {
 		btnLogin.click();
+		return new LoginPage();
 	}
 }

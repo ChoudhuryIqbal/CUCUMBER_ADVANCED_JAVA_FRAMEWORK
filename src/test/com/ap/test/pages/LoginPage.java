@@ -34,10 +34,11 @@ public class LoginPage extends BasePage {
 	public WebElement btnSubmit;
 	
 	
-	public void Login(String userName,String passwd) {
+	public BasePage Login(String userName,String passwd) {
 		textEmail.sendKeys(userName);
 		textPassword.sendKeys(passwd);
 		btnSubmit.click();
+		return new HomePage();
 	}
 	
 	

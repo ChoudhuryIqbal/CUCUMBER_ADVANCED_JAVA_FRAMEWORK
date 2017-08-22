@@ -35,9 +35,9 @@ public class LoginTest {
 	public void Login() throws InterruptedException {
 		Thread.sleep(2000);
 		HomePage home=new HomePage();
-		home.clickLogin();
-		LoginPage page=new LoginPage();
-		page.Login("ho@gmail.com", "password");
+		LoginPage loginPage=home.clickLogin();
+		
+		loginPage.Login("ho@gmail.com", "password");
 		
 	}
 
