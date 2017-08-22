@@ -35,9 +35,11 @@ public class LoginTest extends Base{
 	@Test
 	public void Login() throws InterruptedException {
 		Thread.sleep(2000);
-		HomePage home=new HomePage();
-		currentPage =home.clickLogin();
-		((LoginPage) currentPage).Login("ho@gmail.com", "password");
+	//	HomePage home=new HomePage();
+		currentPage=GetInstance(HomePage.class);
+		currentPage =currentPage.AS(HomePage.class).clickLogin();
+	//	((LoginPage) currentPage).Login("ho@gmail.com", "password");
+		currentPage.AS(LoginPage.class).Login("ho@gmail.com","password");
 	}
 
 }
