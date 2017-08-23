@@ -13,6 +13,7 @@ import com.ap.framework.base.Browsertype;
 import com.ap.framework.base.DriverContext;
 import com.ap.framework.base.FrameworkInitialize;
 import com.ap.framework.utilities.ExcelUtil;
+import com.ap.framework.utilities.LogUtil;
 
 import jxl.read.biff.BiffException;
 import test.com.ap.test.pages.HomePage;
@@ -32,6 +33,9 @@ public class LoginTest extends FrameworkInitialize{
 
 	@org.junit.Before
 	public void Initialize() throws BiffException, IOException {
+		LogUtil logUtil=new LogUtil();
+		logUtil.createLogFile();
+		logUtil.write("Framework initialize");
 		InitializeBrowser(Browsertype.Firefox);
 		
 		//DriverContext.driver.get("http://automationpractice.com/index.php");
