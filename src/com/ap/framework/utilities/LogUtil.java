@@ -21,10 +21,10 @@ public class LogUtil {
 	DateTimeFormatter formatter=DateTimeFormatter.ofPattern("ddMMyyyyHHMMSS");
 	String fileNameFormat=date.format(formatter);
 	private BufferedWriter bufferedWriter=null;
-	public void createLogFile() {
+	public void createLogFile() throws IOException {
 		try {
 			
-			File dir =new File ("C:/Logs/");
+			File dir =new File ("C:/logs/");
 			if(!dir.exists()) {
 				dir.mkdir();
 				
