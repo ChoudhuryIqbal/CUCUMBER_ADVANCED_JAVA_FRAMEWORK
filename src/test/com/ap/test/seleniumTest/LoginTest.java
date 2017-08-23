@@ -52,7 +52,7 @@ public class LoginTest extends FrameworkInitialize{
 	//	((LoginPage) currentPage).Login("ho@gmail.com", "password");
 		//currentPage.AS(LoginPage.class).Login("ho@gmail.com","password");
 		//DDT from Excel
-		currentPage.AS(LoginPage.class).Login(ExcelUtil.ReadCell(0,1),ExcelUtil.ReadCell(1,1));
+		currentPage.AS(LoginPage.class).Login(ExcelUtil.ReadCell("UserName",1),ExcelUtil.ReadCell("Password",1));
 	}
 
 }

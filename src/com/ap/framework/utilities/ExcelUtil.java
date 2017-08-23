@@ -31,7 +31,11 @@ public class ExcelUtil {
 		
 		ColumnDictionary();
 	}
- 
+	
+	
+	public static String ReadCell(String columnName,int rowNumber) {
+		return ReadCell(GetCell(columnName),rowNumber);
+	}
 	//Returns the Number of Rows
 	public static int RowCount()
 	{
@@ -39,7 +43,7 @@ public class ExcelUtil {
 	}
  
 	//Returns the Cell value by taking row and Column values as argument
-	public static String ReadCell(int column,int row)
+	private static String ReadCell(int column,int row)
 	{
 		return wrksheet.getCell(column,row).getContents();
 	}
@@ -55,7 +59,7 @@ public class ExcelUtil {
 	}
  
 	//Read Column Names
-	public static int GetCell(String colName)
+	private  static int GetCell(String colName)
 	{
 		try {
 			int value;
