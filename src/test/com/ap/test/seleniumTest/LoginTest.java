@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,10 +35,11 @@ import test.com.ap.test.pages.LoginPage;
 public class LoginTest extends FrameworkInitialize{
 
 	
+	public static final Logger log=Logger.getLogger(LoginTest.class.getName());
 	
-	
-	//@org.junit.Before
+	@org.junit.Before
 	public void Initialize() throws BiffException, IOException {
+		log.info("starting browser");
 		/*LogUtil logUtil=new LogUtil();
 		logUtil.createLogFile();
 		logUtil.write("Framework initialize");
@@ -45,6 +48,8 @@ public class LoginTest extends FrameworkInitialize{
 		DatabaseUtil.open();
 		DatabaseUtil.executeQuery("Select * From Employee");
 		*/
+		String log4jConfPath="log4j.properties";
+		PropertyConfigurator.configure(log4jConfPath);
 		InitializeBrowser(Browsertype.Firefox);
 		
 		//DriverContext.driver.get("http://automationpractice.com/index.php");
@@ -56,8 +61,9 @@ public class LoginTest extends FrameworkInitialize{
 		}
 	}
 
-	
+	@Test
 	public void Login() throws InterruptedException {
+		log.info("starting test");
 		Thread.sleep(2000);
 	//	HomePage home=new HomePage();
 		currentPage=GetInstance(HomePage.class);
@@ -65,10 +71,14 @@ public class LoginTest extends FrameworkInitialize{
 	//	((LoginPage) currentPage).Login("ho@gmail.com", "password");
 		//currentPage.AS(LoginPage.class).Login("ho@gmail.com","password");
 		//DDT from Excel
+		log.info("passign message");
 		currentPage.AS(LoginPage.class).Login(ExcelUtil.ReadCell("UserName",1),ExcelUtil.ReadCell("Password",1));
 	}
 	
-	@Test
+	/*
+	 * 
+	 * 
+	 * source for writtting test 
 	public void selectDbData() throws SQLException {
 		String query="Select * from login";
 		DatabaseUtil dataBase=new DatabaseUtil();
@@ -78,10 +88,10 @@ public class LoginTest extends FrameworkInitialize{
 			System.out.println(data.getString(1)+" "+data.getString(2));
 		}
 		
-		/*
+		
 		 * if (textData.contains(data.getString(1))){
 		 * }
-		 */
+		 
 	}
 	 
 	public void insertDbData() throws SQLException {
@@ -95,5 +105,5 @@ public class LoginTest extends FrameworkInitialize{
 		DatabaseUtil db=new DatabaseUtil();
 		db.updateData(query);
 	}
-
+*/
 }
