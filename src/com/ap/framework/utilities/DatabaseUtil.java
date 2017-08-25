@@ -25,7 +25,7 @@ public class DatabaseUtil {
 			String driver="com.mysql.cj.jdbc.Driver";
 			String connection="jdbc:mysql://localhost:3306/logininfo";
 			String userName="root";
-			String password="password";
+			String password="root";
 			Class.forName(driver);
 			con=DriverManager.getConnection(connection,userName,password);
 			stmt=con.createStatement();
@@ -51,9 +51,9 @@ public class DatabaseUtil {
 		return data;
 	}
 	
-	public ResultSet updateData(String query) throws SQLException {
-		ResultSet data=getStatement().executeQuery(query);
-		return data;
+	public void updateData(String query) throws SQLException {
+		getStatement().executeUpdate(query);
+		
 	}
 /*
 	public static void open(String connnectionString)

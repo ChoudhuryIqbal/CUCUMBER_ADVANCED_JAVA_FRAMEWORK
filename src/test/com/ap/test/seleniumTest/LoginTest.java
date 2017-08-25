@@ -70,15 +70,20 @@ public class LoginTest extends FrameworkInitialize{
 	
 	@Test
 	public void selectDbData() throws SQLException {
-		String query="Select * from logininfo";
+		String query="Select * from login";
 		DatabaseUtil dataBase=new DatabaseUtil();
 		ResultSet data=dataBase.getData(query);
 		System.out.println(data);
 		while(data.next()) {
-			System.out.println(data.getString(1)+" "+data.getString(2)+" "+data.getString(2));
+			System.out.println(data.getString(1)+" "+data.getString(2));
 		}
+		
+		/*
+		 * if (textData.contains(data.getString(1))){
+		 * }
+		 */
 	}
-	
+	 
 	public void insertDbData() throws SQLException {
 		String query="insert into login values ('sample1','pasword1')";
 		DatabaseUtil db=new DatabaseUtil();
