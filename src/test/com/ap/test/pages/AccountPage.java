@@ -15,9 +15,7 @@ import com.ap.framework.base.BasePage;
  */
 public class AccountPage extends BasePage {
 
-	@FindBy(linkText="Cart")
+	@FindBy(linkText = "Cart")
 	public WebElement txtCart;
 
-
-	
 }

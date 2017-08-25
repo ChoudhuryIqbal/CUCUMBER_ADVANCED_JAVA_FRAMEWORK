@@ -15,35 +15,33 @@ import java.time.format.DateTimeFormatter;
  *
  */
 public class LogUtil {
-	//file format for the log name
-	
-	ZonedDateTime  date=ZonedDateTime.now();
-	DateTimeFormatter formatter=DateTimeFormatter.ofPattern("ddMMyyyyHHMMSS");
-	String fileNameFormat=date.format(formatter);
-	private BufferedWriter bufferedWriter=null;
+	// file format for the log name
+
+	ZonedDateTime date = ZonedDateTime.now();
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyyHHMMSS");
+	String fileNameFormat = date.format(formatter);
+	private BufferedWriter bufferedWriter = null;
+
 	public void createLogFile() throws IOException {
 		try {
-			
-			File dir =new File ("C:/logs/");
-			if(!dir.exists()) {
+
+			File dir = new File("C:/logs/");
+			if (!dir.exists()) {
 				dir.mkdir();
-				
-				
-				//create file 
-				File logFile=new File(dir+"/"+fileNameFormat+".log");
-				FileWriter fileWriter=new FileWriter(logFile.getAbsolutePath());
-				bufferedWriter=new BufferedWriter(fileWriter);
+
+				// create file
+				File logFile = new File(dir + "/" + fileNameFormat + ".log");
+				FileWriter fileWriter = new FileWriter(logFile.getAbsolutePath());
+				bufferedWriter = new BufferedWriter(fileWriter);
 			}
-			
-			
-		}
-		catch(Exception e) {
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//crearte Log File
-	//write some message within the log file
+
+	// crearte Log File
+	// write some message within the log file
 	public void write(String message) {
 		try {
 			bufferedWriter.write(message);
@@ -53,6 +51,5 @@ public class LogUtil {
 			e.printStackTrace();
 		}
 	}
-	
 
 }

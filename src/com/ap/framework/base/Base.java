@@ -17,15 +17,14 @@ public class Base {
 		return page.cast(obj);
 
 	}
-	
-	public <TPage extends BasePage> TPage AS (Class <TPage> pageInstance) {
+
+	public <TPage extends BasePage> TPage AS(Class<TPage> pageInstance) {
 		try {
-			return (TPage)this;
-		}
-		catch(Exception e) {
+			return (TPage) this;
+		} catch (Exception e) {
 			e.getStackTrace();
 		}
 		return null;
-		
+
 	}
 }

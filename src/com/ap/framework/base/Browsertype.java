@@ -9,7 +9,6 @@ package com.ap.framework.base;
  */
 public enum Browsertype {
 
-		Firefox,Chrome,IE,Safari
-
+	Firefox, Chrome, IE, Safari
 
 }

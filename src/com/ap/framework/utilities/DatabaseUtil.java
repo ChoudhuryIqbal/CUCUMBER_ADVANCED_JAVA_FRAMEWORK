@@ -16,56 +16,53 @@ import org.apache.logging.log4j.CloseableThreadContext.Instance;
  *
  */
 public class DatabaseUtil {
-	
+
 	public Connection con;
 	public Statement stmt;
-	
+
 	public Statement getStatement() {
 		try {
-			String driver="com.mysql.cj.jdbc.Driver";
-			String connection="jdbc:mysql://localhost:3306/logininfo";
-			String userName="root";
-			String password="root";
+			String driver = "com.mysql.cj.jdbc.Driver";
+			String connection = "jdbc:mysql://localhost:3306/logininfo";
+			String userName = "root";
+			String password = "root";
 			Class.forName(driver);
-			con=DriverManager.getConnection(connection,userName,password);
-			stmt=con.createStatement();
+			con = DriverManager.getConnection(connection, userName, password);
+			stmt = con.createStatement();
 			return stmt;
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return stmt;
 	}
-	
-	
+
 	public void insertData(String query) throws SQLException {
-		Statement sta=getStatement();
+		Statement sta = getStatement();
 		sta.executeUpdate(query);
-		
+
 	}
-	
-	
+
 	public ResultSet getData(String query) throws SQLException {
-		
-		ResultSet data=getStatement().executeQuery(query);
+
+		ResultSet data = getStatement().executeQuery(query);
 		return data;
 	}
-	
+
 	public void updateData(String query) throws SQLException {
 		getStatement().executeUpdate(query);
-		
-	}
-/*
-	public static void open(String connnectionString)
-			throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		DriverManager.getConnection(connnectionString);
 
 	}
-
-	public void executeQuery(String query, Connection con) throws SQLException {
-		Statement stmt = con.createStatement();
-		ResultSet resutltSet = stmt.executeQuery(query);
-	}*/
+	/*
+	 * public static void open(String connnectionString) throws
+	 * InstantiationException, IllegalAccessException, ClassNotFoundException,
+	 * SQLException { Class.forName("com.mysql.jdbc.Driver").newInstance();
+	 * DriverManager.getConnection(connnectionString);
+	 * 
+	 * }
+	 * 
+	 * public void executeQuery(String query, Connection con) throws SQLException {
+	 * Statement stmt = con.createStatement(); ResultSet resutltSet =
+	 * stmt.executeQuery(query); }
+	 */
 
 }

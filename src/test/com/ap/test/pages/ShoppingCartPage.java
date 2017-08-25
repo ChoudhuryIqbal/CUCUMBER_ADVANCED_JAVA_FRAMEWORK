@@ -13,14 +13,12 @@ import com.ap.framework.base.BasePage;
  * @author choudhuryIqbal
  *
  */
-public class ShoppingCartPage  extends BasePage{
-	
-	
-	@FindBy(id="cart_title")
+public class ShoppingCartPage extends BasePage {
+
+	@FindBy(id = "cart_title")
 	public WebElement txtCartTitle;
 	/**
 	 * @param driver
 	 */
-	
 
 }

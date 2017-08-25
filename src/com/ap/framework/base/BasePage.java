@@ -10,14 +10,13 @@ import org.openqa.selenium.support.PageFactory;
  * @author choudhuryIqbal
  *
  */
-public abstract class BasePage extends Base{
+public abstract class BasePage extends Base {
 
 	/**
 	 * 
 	 */
-	/*public BasePage() {
-		PageFactory.initElements(DriverContext.driver,this);
-	}*/
-	
+	/*
+	 * public BasePage() { PageFactory.initElements(DriverContext.driver,this); }
+	 */
 
 }

@@ -16,33 +16,26 @@ import com.ap.framework.base.BasePage;
  */
 public class LoginPage extends BasePage {
 
-	
-	
-	
 	/**
 	 * @param driver
 	 */
-	
 
-	@FindBy(id="email")
+	@FindBy(id = "email")
 	public WebElement textEmail;
-	
-	@FindBy(id="passwd")
+
+	@FindBy(id = "passwd")
 	public WebElement textPassword;
-	
-	@FindBy(id="SubmitLogin")
+
+	@FindBy(id = "SubmitLogin")
 	public WebElement btnSubmit;
-	
-	
-	public BasePage Login(String userName,String passwd) {
+
+	public BasePage Login(String userName, String passwd) {
 		textEmail.sendKeys(userName);
 		textPassword.sendKeys(passwd);
 		btnSubmit.click();
-		//return new HomePage();
-		return  GetInstance(HomePage.class);
-		
+		// return new HomePage();
+		return GetInstance(HomePage.class);
+
 	}
-	
-	
 
 }

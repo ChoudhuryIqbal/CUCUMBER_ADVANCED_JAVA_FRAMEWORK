@@ -1,0 +1,7 @@
+when create testrunner
+inculde
+"com.cucumber.listener.ExtentCucucmberFormatter: E:\\Eclipse_Selenium \\cucumber_Maven_Project\\Report\report.html"
+
+After class
+Reporter.logadXMLConfig (new File("path of config.xml));
+v,mz
