@@ -11,6 +11,9 @@ import java.sql.Statement;
 
 import org.apache.logging.log4j.CloseableThreadContext.Instance;
 
+import com.ap.framework.config.ConfigReader;
+import com.ap.framework.config.Settings;
+
 /**
  * @author choudhuryIqbal
  *
@@ -19,11 +22,15 @@ public class DatabaseUtil {
 
 	public Connection con;
 	public Statement stmt;
+	
 
 	public Statement getStatement() {
 		try {
-			String driver = "com.mysql.cj.jdbc.Driver";
-			String connection = "jdbc:mysql://localhost:3306/logininfo";
+			ConfigReader.populateSettting();
+			/*String driver = "com.mysql.cj.jdbc.Driver";
+			String connection = "jdbc:mysql://localhost:3306/logininfo";*/
+			String driver=Settings.driverString;
+			String connection=Settings.aUTConnectionString;
 			String userName = "root";
 			String password = "root";
 			Class.forName(driver);

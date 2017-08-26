@@ -36,7 +36,7 @@ public class LoginTest extends FrameworkInitialize {
 
 	public static final Logger log = Logger.getLogger(LoginTest.class.getName());
 
-	@org.junit.Before
+	//@org.junit.Before
 	public void Initialize() throws BiffException, IOException {
 		log.info("starting browser");
 		/*
@@ -62,7 +62,7 @@ public class LoginTest extends FrameworkInitialize {
 		}
 	}
 
-	@Test
+//	@Test
 	public void Login() throws InterruptedException {
 		log.info("starting test");
 		Thread.sleep(2000);
@@ -98,4 +98,15 @@ public class LoginTest extends FrameworkInitialize {
 	 * query="update login if needed "; DatabaseUtil db=new DatabaseUtil();
 	 * db.updateData(query); }
 	 */
+	@Test
+	public void selectDbData() throws SQLException {
+		String query = "Select * from login";
+		DatabaseUtil dataBase = new DatabaseUtil();
+		ResultSet data = dataBase.getData(query);
+		System.out.println(data);
+		while (data.next()) {
+			System.out.println(data.getString(1) + " " + data.getString(2));
+		}
+	}
+
 }
