@@ -5,6 +5,8 @@ package com.ap.framework.config;
 
 import java.sql.Connection;
 
+import com.ap.framework.base.Browsertype;
+
 /**
  * @author choudhuryIqbal
  *
@@ -21,6 +23,6 @@ public class Settings {
 	public static String aUT;
 	public static String driver;
 
-	public static String browserType;
+	public static Browsertype browserType;
 
 }
