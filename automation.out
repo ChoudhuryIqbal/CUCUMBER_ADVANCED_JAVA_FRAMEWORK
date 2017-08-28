@@ -28,3 +28,8 @@
 2017-08-26 13:41:41 INFO  LoginTest:64 - proivdeing excel path
 2017-08-26 13:41:41 INFO  LoginTest:74 - starting test
 2017-08-26 13:41:45 INFO  LoginTest:82 - passign message
+2017-08-28 11:18:07 INFO  LoginTest:42 - enter browsertype
+2017-08-28 11:18:14 INFO  LoginTest:46 - entering Url
+2017-08-28 11:18:16 INFO  LoginTest:49 - proivdeing excel path
+2017-08-28 11:18:16 INFO  LoginTest:30 - starting test
+2017-08-28 11:18:19 INFO  LoginTest:35 - passign message
