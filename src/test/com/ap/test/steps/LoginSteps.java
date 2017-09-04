@@ -3,17 +3,26 @@
  */
 package test.com.ap.test.steps;
 
+import org.apache.log4j.Logger;
+
+import com.ap.framework.base.Base;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.*;
+import test.com.ap.test.pages.HomePage;
+import test.com.ap.test.seleniumTest.LoginTest;
 
 /**
  * @author choudhuryIqbal
  *
  */
-public class LoginSteps {
+public class LoginSteps extends Base{
+	public static final Logger log = Logger.getLogger(LoginSteps.class.getName());
 	@Given("^I have navigated to the application$")
 	public void i_have_navigated_to_the_application() throws Throwable {
-	   System.out.println("i am here");
+		log.info("loading homepage");
+		currentPage = GetInstance(HomePage.class);
+		currentPage = currentPage.AS(HomePage.class).clickLogin();
 	}
 
 	@Given("^I see application opened$")

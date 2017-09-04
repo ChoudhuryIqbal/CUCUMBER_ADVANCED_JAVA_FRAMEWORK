@@ -30,3 +30,8 @@
 2017-08-28 11:18:16,167 [main] INFO test.com.ap.test.seleniumTest.LoginTest - proivdeing excel path
 2017-08-28 11:18:16,292 [main] INFO test.com.ap.test.seleniumTest.LoginTest - starting test
 2017-08-28 11:18:19,623 [main] INFO test.com.ap.test.seleniumTest.LoginTest - passign message
+2017-08-28 13:34:42,432 [main] INFO test.com.ap.test.seleniumTest.LoginTest - enter browsertype
+2017-08-28 13:34:55,468 [main] INFO test.com.ap.test.seleniumTest.LoginTest - entering Url
+2017-08-28 13:34:57,234 [main] INFO test.com.ap.test.seleniumTest.LoginTest - proivdeing excel path
+2017-08-28 13:34:57,418 [main] INFO test.com.ap.test.seleniumTest.LoginTest - starting test
+2017-08-28 13:35:00,696 [main] INFO test.com.ap.test.seleniumTest.LoginTest - passign message
